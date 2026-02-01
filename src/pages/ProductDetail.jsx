@@ -5,6 +5,7 @@ import { Minus, Plus, ShoppingBag, ChevronRight } from 'lucide-react';
 import { productService } from '../services/productService';
 import { useCart } from '../services/CartContext';
 import Button from '../components/ui/Button';
+import ProductDetailSkeleton from './ProductDetailSkeleton';
 import styles from './ProductDetail.module.css';
 import clsx from 'clsx';
 
@@ -21,6 +22,9 @@ const ProductDetail = () => {
   useEffect(() => {
     const fetchProduct = async () => {
       setLoading(true);
+      // Artificial delay for smoother transition/skeleton demo
+      await new Promise(resolve => setTimeout(resolve, 500));
+      
       const data = await productService.getBySlug(slug);
       setProduct(data);
       if (data && data.sizes.length > 0) {
@@ -40,7 +44,7 @@ const ProductDetail = () => {
     addToCart(product, quantity, selectedSize);
   };
 
-  if (loading) return <div className={styles.loading}>Loading product...</div>;
+  if (loading) return <ProductDetailSkeleton />;
   if (!product) return <div className={styles.error}>Product not found</div>;
 
   return (

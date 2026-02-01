@@ -1,11 +1,7 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
-import Home from './pages/Home';
-import Shop from './pages/Shop';
-import About from './pages/About';
-import ProductDetail from './pages/ProductDetail';
-import Cart from './pages/Cart';
+import AnimatedRoutes from './components/layout/AnimatedRoutes';
 import { CartProvider } from './services/CartContext';
 import { ToastContainer } from './components/ui/Toast';
 import CartNotificationFooter from './components/ui/CartNotificationFooter';
@@ -20,14 +16,7 @@ function App() {
         <div className="app-wrapper">
           <Header />
           <main>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/shop" element={<Shop />} />
-              <Route path="/product/:slug" element={<ProductDetail />} />
-              <Route path="/cart" element={<Cart />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/contact" element={<div style={{ padding: '100px 0', textAlign: 'center' }}><h1>Contact Page coming soon</h1></div>} />
-            </Routes>
+            <AnimatedRoutes />
           </main>
           <Footer />
           <CartNotificationFooter />

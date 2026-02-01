@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Trash2, Minus, Plus, ShoppingBag, ArrowLeft } from 'lucide-react';
 import { useCart } from '../services/CartContext';
 import Button from '../components/ui/Button';
+import CountUp from '../components/ui/CountUp';
 import styles from './Cart.module.css';
 
 const Cart = () => {
@@ -60,9 +61,13 @@ const Cart = () => {
                           </button>
                         </div>
                         <div className={styles.priceGroup}>
-                          <p className={styles.itemPrice}>₹{item.price * item.quantity}</p>
+                          <p className={styles.itemPrice}>
+                            <CountUp value={item.price * item.quantity} prefix="₹" />
+                          </p>
                           {item.originalPrice && (
-                            <p className={styles.oldPrice}>₹{item.originalPrice * item.quantity}</p>
+                            <p className={styles.oldPrice}>
+                               <CountUp value={item.originalPrice * item.quantity} prefix="₹" />
+                            </p>
                           )}
                         </div>
                       </div>
@@ -78,15 +83,15 @@ const Cart = () => {
                 <h2>Order Summary</h2>
                 <div className={styles.summaryRow}>
                   <span>Subtotal</span>
-                  <span>₹{subtotal}</span>
+                  <span><CountUp value={subtotal} prefix="₹" /></span>
                 </div>
                 <div className={styles.summaryRow}>
                   <span>Shipping</span>
-                  <span>₹{shipping}</span>
+                  <span><CountUp value={shipping} prefix="₹" /></span>
                 </div>
                 <div className={styles.totalRow}>
                   <span>Total</span>
-                  <span>₹{total}</span>
+                  <span><CountUp value={total} prefix="₹" /></span>
                 </div>
                 
                 <Button variant="primary" className={styles.checkoutBtn}>
