@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import Button from '../components/ui/Button';
 import styles from './About.module.css';
@@ -61,7 +62,7 @@ const About = () => {
               viewport={{ once: true }}
               className={styles.storyImage}
             >
-              <img src="/src/assets/images/about-hero.jpg" alt="Our Founders" />
+              <img src="/images/about-hero.jpg" alt="Our Founders" />
             </motion.div>
             
             <motion.div 
@@ -131,9 +132,11 @@ const About = () => {
           <div className={styles.ctaCard}>
             <h2>Ready to Experience the Difference?</h2>
             <p>Join thousands of happy parents who trust Oh Baby! for their baby’s wardrobe.</p>
-            <Button size="lg" variant="primary" className={styles.ctaBtn}>
-              Shop Now
-            </Button>
+            <Link to="/shop">
+              <Button size="lg" variant="primary" className={styles.ctaBtn}>
+                Shop Now
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

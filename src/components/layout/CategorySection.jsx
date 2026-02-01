@@ -3,10 +3,10 @@ import { motion } from 'framer-motion';
 import styles from './CategorySection.module.css';
 
 const categories = [
-  { id: 'cat_1', name: 'Newborn', age: '0-3 Months', image: '/src/assets/images/categories/cat-newborn.jpg' },
-  { id: 'cat_2', name: 'Infant', age: '3-12 Months', image: '/src/assets/images/categories/cat-infant.jpg' },
-  { id: 'cat_3', name: 'Toddler', age: '1-3 Years', image: '/src/assets/images/categories/cat-toddler.jpg' },
-  { id: 'cat_4', name: 'Kids', age: '3-6 Years', image: '/src/assets/images/categories/cat-kids.jpg' },
+  { id: 'cat_1', name: 'Newborn', age: '0-3 Months', image: '/images/categories/cat-newborn.jpg' },
+  { id: 'cat_2', name: 'Infant', age: '3-12 Months', image: '/images/categories/cat-infant.jpg' },
+  { id: 'cat_3', name: 'Toddler', age: '1-3 Years', image: '/images/categories/cat-toddler.jpg' },
+  { id: 'cat_4', name: 'Kids', age: '3-6 Years', image: '/images/categories/cat-kids.jpg' },
 ];
 
 const CategorySection = () => {
