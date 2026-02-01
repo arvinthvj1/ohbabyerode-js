@@ -33,8 +33,11 @@
   display: block;
   object-fit: contain;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  /* Layered Shadow: Soft dark shadow for depth + Subtle white glow for separation */
-  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.2)) drop-shadow(0 0 1px rgba(255,255,255,0.5));
+  filter: drop-shadow(0.5px 0 0 rgba(0,0,0,0.12))
+    drop-shadow(-0.5px 0 0 rgba(0,0,0,0.12))
+    drop-shadow(0 0.5px 0 rgba(0,0,0,0.12))
+    drop-shadow(0 -0.5px 0 rgba(0,0,0,0.12))
+    drop-shadow(0 0 1.2px rgba(0,0,0,0.11));
 }
 
 .scrolled .logoImage {
