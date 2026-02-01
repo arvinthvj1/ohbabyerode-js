@@ -16,7 +16,7 @@ const HeroBanner = () => {
             transition={{ duration: 0.6 }}
             className={styles.subheadline}
           >
-            New Collection 2024
+            {/* New Collection 2024 */}
           </motion.h4>
           
           <motion.h1 
