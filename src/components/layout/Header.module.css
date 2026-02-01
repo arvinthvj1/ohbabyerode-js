@@ -4,41 +4,46 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  transition: var(--transition-smooth);
-  padding: 1.5rem 0;
-  background-color: transparent;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 1.5rem 0; /* Spacious at the top */
+  background: transparent; /* Completely transparent initially */
+  backdrop-filter: none;
+  border-bottom: none;
+  box-shadow: none;
 }
 
 .scrolled {
-  padding: 0.75rem 0;
-  background-color: rgba(255, 255, 255, 0.8);
+  padding: 0.5rem 0; /* Compact on scroll */
+  background: rgba(255, 255, 255, 0.95); /* Solid / Nearly Solid on scroll */
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid var(--border-subtle);
 }
 
 .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 100%; /* Ensure content centers vertically */
 }
 
-.logo h1 {
-  font-size: 1.75rem;
-  color: var(--primary);
-  line-height: 1;
-  font-weight: 700;
-  letter-spacing: -0.03em;
+.logoImage {
+  height: 85px; /* Clean, premium size without being huge */
+  width: auto;
+  display: block;
+  object-fit: contain;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  /* Layered Shadow: Soft dark shadow for depth + Subtle white glow for separation */
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.2)) drop-shadow(0 0 1px rgba(255,255,255,0.5));
 }
 
-.logo span {
-  font-size: 0.7rem;
-  color: var(--text-secondary);
-  font-family: var(--font-family);
-  font-weight: 400;
-  letter-spacing: 0.05em;
-  opacity: 0.8;
+.scrolled .logoImage {
+  height: 60px; /* Shrinks when scrolled */
+}
+
+.logo:hover .logoImage {
+  transform: scale(1.05);
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.15));
 }
 
 .desktopNav {
@@ -120,7 +125,7 @@
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-  border-top: 1px solid #eee;
+  border-top: 1px solid var(--border-subtle);
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
 }
 

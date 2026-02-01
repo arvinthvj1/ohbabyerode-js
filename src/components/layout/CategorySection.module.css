@@ -49,7 +49,7 @@
 
 .card:hover .imageWrapper {
   transform: translateY(-8px);
-  box-shadow: 0 15px 30px rgba(255, 138, 113, 0.15);
+  box-shadow: 0 15px 30px var(--shadow-color);
 }
 
 .card h3 {

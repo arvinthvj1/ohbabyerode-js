@@ -17,7 +17,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(90deg, rgba(255, 249, 246, 0.8) 0%, rgba(255, 249, 246, 0.2) 100%);
+  background: var(--gradient-overlay);
   z-index: 1;
 }
 
@@ -61,7 +61,7 @@
 }
 
 .cta {
-  box-shadow: 0 10px 20px rgba(255, 138, 113, 0.2);
+  box-shadow: 0 10px 20px var(--shadow-color);
 }
 
 @media (max-width: 1024px) {
@@ -79,7 +79,7 @@
   }
   
   .overlay {
-    background: linear-gradient(180deg, rgba(255, 249, 246, 0.9) 0%, rgba(255, 249, 246, 0.4) 100%);
+    background: var(--gradient-overlay);
   }
 
   .content {

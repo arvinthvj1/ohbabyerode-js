@@ -1,25 +1,105 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
 
 :root {
+  /* =========================================
+     THEME SYSTEM - 1. ORGANIC EARTH (Default)
+     ========================================= */
+  --primary: #84A98C;
+  --secondary: #CAD2C5;
+  --background: #F9F7F5;
+  --surface: #FFFFFF;
+  --text-primary: #2F3E46;
+  --text-secondary: #52796F;
+  --text-light: #84A98C;
+  
+  /* Semantic Aliases */
+  --bg-secondary: #F2EBE5;
+  --bg-tertiary: #F8F4F0;
+  --border-subtle: #E6E1DC;
+  --gradient-overlay: linear-gradient(90deg, rgba(249, 247, 245, 0.9) 0%, rgba(249, 247, 245, 0.3) 100%);
+  --shadow-color: rgba(132, 169, 140, 0.2);
+  --hover-bg: #F8F4F0;
+
+  /* Pastels */
+  --pastel-teal: #E0E5DF;
+  --pastel-yellow: #F2E8CF;
+  --pastel-pink: #F4ACB7;
+  --pastel-blue: #D8E2DC;
+
+  /* Global Settings */
+  --font-family: 'Inter', sans-serif;
+  --font-display: 'Playfair Display', serif;
+  --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  --header-height: 80px;
+}
+
+/* 2. BLUE & WHITE */
+[data-theme='blue'] {
+  --primary: #2563EB;
+  --secondary: #60A5FA;
+  --background: #F8FAFC;
+  --surface: #FFFFFF;
+  --text-primary: #1E293B;
+  --text-secondary: #475569;
+  --text-light: #94A3B8;
+
+  --bg-secondary: #F1F5F9;
+  --bg-tertiary: #F8FAFC;
+  --border-subtle: #E2E8F0;
+  --gradient-overlay: linear-gradient(90deg, rgba(248, 250, 252, 0.9) 0%, rgba(248, 250, 252, 0.3) 100%);
+  --shadow-color: rgba(37, 99, 235, 0.2);
+  --hover-bg: #EFF6FF;
+
+  --pastel-teal: #E0F2FE;
+  --pastel-yellow: #FEF9C3;
+  --pastel-pink: #FEE2E2;
+  --pastel-blue: #DBEAFE;
+}
+
+/* 3. CLASSIC (Orange/Green) */
+[data-theme='classic'] {
   --primary: #FF8A71;
   --secondary: #8EB69B;
   --background: #FFF9F6;
   --surface: #FFFFFF;
-  
   --text-primary: #333333;
   --text-secondary: #5F5F5F;
   --text-light: #9E9E9E;
+
+  --bg-secondary: #FFF0EB;
+  --bg-tertiary: #FFF9F6;
+  --border-subtle: #FFEEE6;
+  --gradient-overlay: linear-gradient(90deg, rgba(255, 249, 246, 0.9) 0%, rgba(255, 249, 246, 0.3) 100%);
+  --shadow-color: rgba(255, 138, 113, 0.25);
+  --hover-bg: #FFF5F2;
 
   --pastel-teal: #B2E2E2;
   --pastel-yellow: #FFF4BD;
   --pastel-pink: #FFE5E5;
   --pastel-blue: #D4F0F7;
+}
 
-  --font-family: 'Inter', sans-serif;
-  --font-display: 'Playfair Display', serif;
+/* 4. LAVENDER DREAM */
+[data-theme='lavender'] {
+  --primary: #B392AC;
+  --secondary: #D1B3C4;
+  --background: #FDFAF6;
+  --surface: #FFFFFF;
+  --text-primary: #4A404F;
+  --text-secondary: #735D78;
+  --text-light: #B392AC;
 
-  --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  --header-height: 80px;
+  --bg-secondary: #F7F0F5;
+  --bg-tertiary: #FAF5F8;
+  --border-subtle: #EADCE6;
+  --gradient-overlay: linear-gradient(90deg, rgba(253, 250, 246, 0.9) 0%, rgba(253, 250, 246, 0.3) 100%);
+  --shadow-color: rgba(179, 146, 172, 0.25);
+  --hover-bg: #F9F0F6;
+
+  --pastel-teal: #D8E2DC;
+  --pastel-yellow: #FAE1DD;
+  --pastel-pink: #FFD7BA;
+  --pastel-blue: #D1B3C4;
 }
 
 @media (max-width: 768px) {

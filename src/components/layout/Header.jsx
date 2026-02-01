@@ -4,6 +4,8 @@ import { ShoppingCart, Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useCart } from '../../services/CartContext';
 import clsx from 'clsx';
+import ThemeSwitcher from '../ui/ThemeSwitcher';
+import logoImg from '../../assets/images/logo/ohbabytransparentlogo.png';
 import styles from './Header.module.css';
 
 const Header = () => {
@@ -30,8 +32,7 @@ const Header = () => {
     <header className={clsx(styles.header, isScrolled && styles.scrolled)}>
       <div className={clsx("container", styles.container)}>
         <Link to="/" className={styles.logo}>
-          <h1>Oh Baby!</h1>
-          <span>Curated for lil' cuppycakes</span>
+          <img src={logoImg} alt="Oh Baby! Logo" className={styles.logoImage} />
         </Link>
 
         {/* Desktop Nav */}
@@ -48,6 +49,7 @@ const Header = () => {
         </nav>
 
         <div className={styles.actions}>
+          <ThemeSwitcher />
           <Link to="/cart" className={styles.iconButton}>
             <ShoppingCart size={24} />
             {itemCount > 0 && (
