@@ -11,6 +11,7 @@ export const CartProvider = ({ children }) => {
   });
 
   const [toast, setToast] = useState(null);
+  const [cartNotification, setCartNotification] = useState(null);
 
   useEffect(() => {
     localStorage.setItem('ohbaby_cart', JSON.stringify(cart));
@@ -20,6 +21,8 @@ export const CartProvider = ({ children }) => {
     setToast({ message, type });
     setTimeout(() => setToast(null), 3000);
   };
+
+  const dismissNotification = () => setCartNotification(null);
 
   const addToCart = (product, quantity, size) => {
     setCart(prev => {
@@ -35,7 +38,12 @@ export const CartProvider = ({ children }) => {
 
       return [...prev, { ...product, quantity, selectedSize: size }];
     });
-    showToast(`${product.name} added to cart!`);
+    // Replaced toast with footer notification
+    setCartNotification({ 
+      name: product.name, 
+      image: product.image,
+      size: size 
+    });
   };
 
   const removeFromCart = (productId, size) => {
@@ -70,7 +78,9 @@ export const CartProvider = ({ children }) => {
       subtotal,
       itemCount,
       toast,
-      showToast
+      showToast,
+      cartNotification,
+      dismissNotification
     }}>
       {children}
     </CartContext.Provider>

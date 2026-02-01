@@ -6,16 +6,15 @@ export const useTheme = () => useContext(ThemeContext);
 
 export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState(() => {
-    // Check local storage or default to 'organic' (no data-theme attribute needed for default)
-    return localStorage.getItem('app-theme') || 'organic';
+    // Check local storage or default to 'blue' (Oh Baby Classic)
+    return localStorage.getItem('app-theme') || 'blue';
   });
 
   useEffect(() => {
     const root = document.documentElement;
-    // Remove previous theme attributes if you want to be safe, 
-    // but setting a new value overwrites if we use a single attribute.
     
-    if (theme === 'organic') {
+    // If theme is 'blue' (default), remove attribute to use :root styles
+    if (theme === 'blue') {
       root.removeAttribute('data-theme');
     } else {
       root.setAttribute('data-theme', theme);

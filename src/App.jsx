@@ -8,6 +8,7 @@ import ProductDetail from './pages/ProductDetail';
 import Cart from './pages/Cart';
 import { CartProvider } from './services/CartContext';
 import { ToastContainer } from './components/ui/Toast';
+import CartNotificationFooter from './components/ui/CartNotificationFooter';
 import ScrollToTop from './components/ui/ScrollToTop';
 import './index.css';
 
@@ -29,6 +30,7 @@ function App() {
             </Routes>
           </main>
           <Footer />
+          <CartNotificationFooter />
           <ToastContainer />
         </div>
       </CartProvider>

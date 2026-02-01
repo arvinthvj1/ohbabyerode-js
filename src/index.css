@@ -1,40 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
 
 :root {
   /* =========================================
-     THEME SYSTEM - 1. ORGANIC EARTH (Default)
+     THEME SYSTEM - 1. OH BABY CLASSIC (Default)
      ========================================= */
-  --primary: #84A98C;
-  --secondary: #CAD2C5;
-  --background: #F9F7F5;
-  --surface: #FFFFFF;
-  --text-primary: #2F3E46;
-  --text-secondary: #52796F;
-  --text-light: #84A98C;
-  
-  /* Semantic Aliases */
-  --bg-secondary: #F2EBE5;
-  --bg-tertiary: #F8F4F0;
-  --border-subtle: #E6E1DC;
-  --gradient-overlay: linear-gradient(90deg, rgba(249, 247, 245, 0.9) 0%, rgba(249, 247, 245, 0.3) 100%);
-  --shadow-color: rgba(132, 169, 140, 0.2);
-  --hover-bg: #F8F4F0;
-
-  /* Pastels */
-  --pastel-teal: #E0E5DF;
-  --pastel-yellow: #F2E8CF;
-  --pastel-pink: #F4ACB7;
-  --pastel-blue: #D8E2DC;
-
-  /* Global Settings */
-  --font-family: 'Inter', sans-serif;
-  --font-display: 'Playfair Display', serif;
-  --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  --header-height: 80px;
-}
-
-/* 2. SKY BLUE & WHITE */
-[data-theme='blue'] {
   --primary: #56B2D4;      /* Verified Sky Blue */
   --secondary: #A0D6E8;    /* Lighter harmonic blue */
   --background: #F0F9FB;   /* Very faint blue-white tint */
@@ -54,6 +23,35 @@
   --pastel-yellow: #FFFDE7;
   --pastel-pink: #FCE4EC;
   --pastel-blue: #E1F5FE;
+
+  /* Global Settings */
+  --font-family: 'Outfit', sans-serif;
+  --font-display: 'Playfair Display', serif;
+  --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  --header-height: 80px;
+}
+
+/* 2. ORGANIC EARTH */
+[data-theme='organic'] {
+  --primary: #84A98C;
+  --secondary: #CAD2C5;
+  --background: #F9F7F5;
+  --surface: #FFFFFF;
+  --text-primary: #2F3E46;
+  --text-secondary: #52796F;
+  --text-light: #84A98C;
+  
+  --bg-secondary: #F2EBE5;
+  --bg-tertiary: #F8F4F0;
+  --border-subtle: #E6E1DC;
+  --gradient-overlay: linear-gradient(90deg, rgba(249, 247, 245, 0.9) 0%, rgba(249, 247, 245, 0.3) 100%);
+  --shadow-color: rgba(132, 169, 140, 0.2);
+  --hover-bg: #F8F4F0;
+
+  --pastel-teal: #E0E5DF;
+  --pastel-yellow: #F2E8CF;
+  --pastel-pink: #F4ACB7;
+  --pastel-blue: #D8E2DC;
 }
 
 /* 3. CLASSIC (Orange/Green) */

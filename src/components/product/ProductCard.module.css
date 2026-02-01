@@ -6,11 +6,17 @@
 
 .card {
   background-color: white;
-  border-radius: 12px;
+  border-radius: 8px; /* Slightly tighter radius */
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05); /* Very subtle, flat shadow like Flipkart */
   cursor: pointer;
-  transition: var(--transition-smooth);
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  transform: translateY(-4px);
 }
 
 .imageContainer {
@@ -28,13 +34,13 @@
 }
 
 .card:hover .imageContainer img {
-  transform: scale(1.05);
+  transform: scale(1.03); /* Subtle zoom */
 }
 
 .badges {
   position: absolute;
-  top: 1rem;
-  left: 1rem;
+  top: 0.75rem;
+  left: 0.75rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -42,33 +48,37 @@
 }
 
 .info {
-  padding: 1.5rem;
+  padding: 1rem 0.75rem; /* Tighter padding */
 }
 
 .info h3 {
-  font-size: 1.125rem;
-  margin-bottom: 0.5rem;
+  font-size: 0.95rem; /* Smaller, body-like font size */
+  font-weight: 400;   /* Regular weight, distinctly "not bold" */
+  color: var(--text-secondary); /* Softer color */
+  margin-bottom: 0.35rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-family: var(--font-family); /* Use Outfit, not display font */
 }
 
 .priceContainer {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.5rem;
 }
 
 .price {
-  font-weight: 700;
-  color: var(--primary);
-  font-size: 1.25rem;
+  font-weight: 600; /* Semi-bold, not heavy bold */
+  color: var(--text-primary); /* Dark text for price, standard in e-comm */
+  font-size: 1rem;
 }
 
 .oldPrice {
   text-decoration: line-through;
   color: var(--text-light);
-  font-size: 0.95rem;
+  font-size: 0.85rem;
+  font-weight: 400;
 }
 
 @media (max-width: 768px) {

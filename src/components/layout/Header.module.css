@@ -13,7 +13,7 @@
 }
 
 .scrolled {
-  padding: 0.5rem 0; /* Compact on scroll */
+  padding: 1rem 0; /* Increased from 0.5rem for more presence */
   background: rgba(255, 255, 255, 0.95); /* Solid / Nearly Solid on scroll */
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
@@ -144,13 +144,13 @@
     display: flex;
   }
 
-  /* Optimize Logo for Mobile */
+  /* Optimize Logo for Mobile - Increased size */
   .logoImage {
-    height: 50px; /* Smaller base size for mobile */
+    height: 65px; /* Increased from 50px */
   }
   
   .scrolled .logoImage {
-    height: 40px; /* Even smaller when scrolled on mobile */
+    height: 55px; /* Increased from 40px */
   }
 
   .header {
@@ -158,6 +158,6 @@
   }
   
   .scrolled {
-    padding: 0.5rem 0;
+    padding: 0.75rem 0; /* Increased mobile scrolled padding */
   }
 }
