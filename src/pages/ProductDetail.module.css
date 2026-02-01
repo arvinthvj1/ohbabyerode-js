@@ -1,5 +1,5 @@
 .productPage {
-  padding-top: 80px;
+  padding-top: 100px; /* Increased from 80px to safely clear header */
   min-height: 100vh;
 }
 
@@ -195,7 +195,7 @@
 
 @media (max-width: 768px) {
   .productPage {
-    padding-top: 60px;
+    padding-top: 85px; /* Increased from 60px to clear mobile header */
   }
 
   .breadcrumbs {

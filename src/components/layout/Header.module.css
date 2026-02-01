@@ -143,4 +143,21 @@
   .mobileMenuBtn {
     display: flex;
   }
+
+  /* Optimize Logo for Mobile */
+  .logoImage {
+    height: 50px; /* Smaller base size for mobile */
+  }
+  
+  .scrolled .logoImage {
+    height: 40px; /* Even smaller when scrolled on mobile */
+  }
+
+  .header {
+    padding: 0.75rem 0; /* Tighter padding on mobile */
+  }
+  
+  .scrolled {
+    padding: 0.5rem 0;
+  }
 }

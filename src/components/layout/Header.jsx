@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink, Link, useLocation } from 'react-router-dom';
 import { ShoppingCart, Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useCart } from '../../services/CartContext';
@@ -12,6 +12,8 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { itemCount } = useCart();
+  const location = useLocation();
+  const isHome = location.pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,7 +31,7 @@ const Header = () => {
   ];
 
   return (
-    <header className={clsx(styles.header, isScrolled && styles.scrolled)}>
+    <header className={clsx(styles.header, (isScrolled || !isHome) && styles.scrolled)}>
       <div className={clsx("container", styles.container)}>
         <Link to="/" className={styles.logo}>
           <img src={logoImg} alt="Oh Baby! Logo" className={styles.logoImage} />

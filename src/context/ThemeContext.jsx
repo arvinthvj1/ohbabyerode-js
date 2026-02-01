@@ -29,8 +29,8 @@ export const ThemeProvider = ({ children }) => {
     setTheme,
     availableThemes: [
       { id: 'organic', name: 'Organic Earth', color: '#84A98C' },
-      { id: 'blue', name: 'Blue & White', color: '#2563EB' },
-      { id: 'classic', name: 'Classic', color: '#FF8A71' },
+      { id: 'blue', name: 'Oh Baby Classic', color: '#56B2D4' },
+      { id: 'classic', name: 'Orange', color: '#FF8A71' },
       { id: 'lavender', name: 'Lavender Dream', color: '#B392AC' },
     ]
   };

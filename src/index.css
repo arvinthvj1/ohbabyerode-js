@@ -33,27 +33,27 @@
   --header-height: 80px;
 }
 
-/* 2. BLUE & WHITE */
+/* 2. SKY BLUE & WHITE */
 [data-theme='blue'] {
-  --primary: #2563EB;
-  --secondary: #60A5FA;
-  --background: #F8FAFC;
+  --primary: #56B2D4;      /* Verified Sky Blue */
+  --secondary: #A0D6E8;    /* Lighter harmonic blue */
+  --background: #F0F9FB;   /* Very faint blue-white tint */
   --surface: #FFFFFF;
-  --text-primary: #1E293B;
-  --text-secondary: #475569;
+  --text-primary: #2C4A52; /* Deep teal-grey for readability */
+  --text-secondary: #567C85;
   --text-light: #94A3B8;
 
-  --bg-secondary: #F1F5F9;
-  --bg-tertiary: #F8FAFC;
-  --border-subtle: #E2E8F0;
-  --gradient-overlay: linear-gradient(90deg, rgba(248, 250, 252, 0.9) 0%, rgba(248, 250, 252, 0.3) 100%);
-  --shadow-color: rgba(37, 99, 235, 0.2);
-  --hover-bg: #EFF6FF;
+  --bg-secondary: #E3F2F6;
+  --bg-tertiary: #F0F9FB;
+  --border-subtle: #D1E9F0;
+  --gradient-overlay: linear-gradient(90deg, rgba(240, 249, 251, 0.9) 0%, rgba(240, 249, 251, 0.3) 100%);
+  --shadow-color: rgba(86, 178, 212, 0.2);
+  --hover-bg: #E3F2F6;
 
-  --pastel-teal: #E0F2FE;
-  --pastel-yellow: #FEF9C3;
-  --pastel-pink: #FEE2E2;
-  --pastel-blue: #DBEAFE;
+  --pastel-teal: #E0F7FA;
+  --pastel-yellow: #FFFDE7;
+  --pastel-pink: #FCE4EC;
+  --pastel-blue: #E1F5FE;
 }
 
 /* 3. CLASSIC (Orange/Green) */

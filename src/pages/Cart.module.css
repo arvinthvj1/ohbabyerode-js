@@ -1,6 +1,7 @@
 .cartPage {
-  padding-top: calc(var(--header-height) + 3rem);
-  min-height: calc(100vh - 400px);
+  padding-top: 100px; /* Increased to clear header */
+  padding-bottom: 5rem;
+  min-height: 80vh;
 }
 
 .title {
@@ -209,7 +210,8 @@
 
 @media (max-width: 768px) {
   .cartPage {
-    padding-top: calc(var(--header-height) + 2rem);
+    padding-top: 85px; /* Fixed mobile overlap */
+    padding-bottom: 3rem;
   }
 
   .title {
