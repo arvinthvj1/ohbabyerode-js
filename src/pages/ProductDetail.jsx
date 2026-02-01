@@ -72,7 +72,12 @@ const ProductDetail = () => {
             className={styles.infoSection}
           >
             <h1 className={styles.title}>{product.name}</h1>
-            <p className={styles.price}>₹{product.price}</p>
+            <div className={styles.priceContainer}>
+              <span className={styles.price}>₹{product.price}</span>
+              {product.originalPrice && (
+                <span className={styles.oldPrice}>₹{product.originalPrice}</span>
+              )}
+            </div>
             
             <p className={styles.description}>{product.description}</p>
 

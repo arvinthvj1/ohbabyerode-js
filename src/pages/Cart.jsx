@@ -59,7 +59,12 @@ const Cart = () => {
                             <Plus size={16} />
                           </button>
                         </div>
-                        <p className={styles.itemPrice}>₹{item.price * item.quantity}</p>
+                        <div className={styles.priceGroup}>
+                          <p className={styles.itemPrice}>₹{item.price * item.quantity}</p>
+                          {item.originalPrice && (
+                            <p className={styles.oldPrice}>₹{item.originalPrice * item.quantity}</p>
+                          )}
+                        </div>
                       </div>
                     </div>
                   </motion.div>
