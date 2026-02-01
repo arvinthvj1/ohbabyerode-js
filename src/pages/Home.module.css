@@ -1,0 +1,175 @@
+.home {
+  display: flex;
+  flex-direction: column;
+}
+
+.productSection {
+  padding: 5rem 0;
+}
+
+.sectionTitle {
+  font-size: 2.25rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.trustSection {
+  padding: 4rem 0;
+  background-color: white;
+}
+
+.trustGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  text-align: center;
+}
+
+.trustItem span {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.trustItem h4 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.trustItem p {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.newsletterSection {
+  padding: 5rem 0;
+}
+
+.newsletterCard {
+  background-color: var(--primary);
+  border-radius: 24px;
+  padding: 4rem;
+  text-align: center;
+  color: white;
+  box-shadow: 0 20px 40px rgba(255, 138, 113, 0.2);
+}
+
+.newsletterCard h3 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.newsletterCard p {
+  font-size: 1.125rem;
+  margin-bottom: 2.5rem;
+  opacity: 0.9;
+}
+
+.newsletterForm {
+  display: flex;
+  max-width: 500px;
+  margin: 0 auto;
+  gap: 0.75rem;
+}
+
+.newsletterForm input {
+  flex: 1;
+  padding: 1rem 1.5rem;
+  border-radius: 50px;
+  border: none;
+  font-size: 1rem;
+  outline: none;
+}
+
+.newsletterForm button {
+  background-color: var(--text-primary);
+  color: white;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: var(--transition-smooth);
+}
+
+.newsletterForm button:hover {
+  background-color: #000;
+  transform: translateY(-2px);
+}
+
+.skeleton {
+  height: 400px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #f8f8f8 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+  border-radius: 12px;
+}
+
+@keyframes loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+@media (max-width: 1024px) {
+  .productGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .sectionTitle {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .productGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+  
+  .trustGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  
+  .newsletterSection {
+    padding: 3rem 0;
+  }
+
+  .newsletterCard {
+    padding: 3rem 1.5rem;
+  }
+
+  .newsletterCard h3 {
+    font-size: 1.75rem;
+  }
+  
+  .newsletterForm {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .newsletterForm button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .productGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .trustGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .newsletterCard h3 {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,28 @@
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: white;
+}
+
+.new {
+  background-color: #FF8A71; /* Primary coral */
+}
+
+.bestseller {
+  background-color: #8EB69B; /* Secondary green */
+}
+
+.off {
+  background-color: #F8D57E; /* Soft yellow */
+  color: #4A4A4A;
+}
+
+/* Fallback/Default */
+.badge:not(.new):not(.bestseller):not(.off) {
+  background-color: var(--text-light);
+}

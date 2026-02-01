@@ -1,0 +1,141 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: var(--transition-smooth);
+  padding: 1.5rem 0;
+  background-color: transparent;
+}
+
+.scrolled {
+  padding: 0.75rem 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo h1 {
+  font-size: 1.75rem;
+  color: var(--primary);
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.logo span {
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+  font-family: var(--font-family);
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  opacity: 0.8;
+}
+
+.desktopNav {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.navLink {
+  font-weight: 500;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  transition: var(--transition-smooth);
+  position: relative;
+}
+
+.navLink:hover, .active {
+  color: var(--primary);
+}
+
+.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary);
+  border-radius: 2px;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.iconButton {
+  padding: 0.5rem;
+  color: var(--text-primary);
+  transition: var(--transition-smooth);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cartBadge {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  background-color: var(--primary);
+  color: white;
+  font-size: 0.7rem;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  border: 2px solid white;
+}
+
+.iconButton:hover {
+  color: var(--primary);
+  transform: scale(1.1);
+}
+
+.mobileMenuBtn {
+  display: none;
+}
+
+.mobileNav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  border-top: 1px solid #eee;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+}
+
+.mobileNavLink {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+  .desktopNav {
+    display: none;
+  }
+  
+  .mobileMenuBtn {
+    display: flex;
+  }
+}

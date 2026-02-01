@@ -1,0 +1,197 @@
+.aboutPage {
+  padding-top: 80px;
+}
+
+.hero {
+  padding: 6rem 0;
+  background-color: var(--primary);
+  color: white;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  max-width: 600px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+.storySection {
+  padding: 8rem 0;
+}
+
+.storyGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.storyImage img {
+  border-radius: 24px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.1);
+}
+
+.storyText h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.storyText p {
+  margin-bottom: 1.5rem;
+  color: var(--text-secondary);
+  font-size: 1.125rem;
+}
+
+.valuesSection {
+  padding: 8rem 0;
+  background-color: white;
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 4rem;
+}
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+.valueCard {
+  text-align: center;
+  padding: 3rem;
+  background-color: var(--background);
+  border-radius: 20px;
+  transition: var(--transition-smooth);
+}
+
+.valueCard:hover {
+  transform: translateY(-10px);
+  background-color: #fff;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+}
+
+.valueIcon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+.valueCard h3 {
+  margin-bottom: 1rem;
+}
+
+.valueCard p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.qualitySection {
+  padding: 8rem 0;
+}
+
+.qualityCard {
+  background-color: white;
+  padding: 4rem;
+  border-radius: 32px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+  text-align: center;
+}
+
+.qualityCard h2 {
+  margin-bottom: 3rem;
+}
+
+.qualityGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem 3rem;
+  text-align: left;
+}
+
+.qualityItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.check {
+  width: 24px;
+  height: 24px;
+  background-color: var(--secondary);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+}
+
+.ctaSection {
+  padding-bottom: 8rem;
+}
+
+.ctaCard {
+  background-color: var(--secondary);
+  padding: 6rem 4rem;
+  border-radius: 32px;
+  text-align: center;
+  color: white;
+}
+
+.ctaCard h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.ctaCard p {
+  font-size: 1.25rem;
+  margin-bottom: 2.5rem;
+  opacity: 0.9;
+}
+
+.ctaBtn {
+  background-color: white;
+  color: var(--secondary);
+}
+
+.ctaBtn:hover {
+  background-color: #f0f0f0;
+}
+
+@media (max-width: 1024px) {
+  .storyGrid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .valuesGrid, .qualityGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .valuesGrid, .qualityGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .qualityCard {
+    padding: 2.5rem 1.5rem;
+  }
+}
