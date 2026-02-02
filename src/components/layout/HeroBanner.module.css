@@ -64,6 +64,8 @@
   box-shadow: 0 10px 20px var(--shadow-color);
 }
 
+
+
 @media (max-width: 1024px) {
   .headline {
     font-size: 3.5rem;

@@ -15,7 +15,7 @@
   --bg-secondary: #E3F2F6;
   --bg-tertiary: #F0F9FB;
   --border-subtle: #D1E9F0;
-  --gradient-overlay: linear-gradient(90deg, rgba(240, 249, 251, 0.9) 0%, rgba(240, 249, 251, 0.3) 100%);
+  --gradient-overlay: linear-gradient(90deg, rgb(240 249 251 / 36%) 0%, rgba(240, 249, 251, .3) 100%);
   --shadow-color: rgba(86, 178, 212, 0.2);
   --hover-bg: #E3F2F6;
 
@@ -44,7 +44,7 @@
   --bg-secondary: #F2EBE5;
   --bg-tertiary: #F8F4F0;
   --border-subtle: #E6E1DC;
-  --gradient-overlay: linear-gradient(90deg, rgba(249, 247, 245, 0.9) 0%, rgba(249, 247, 245, 0.3) 100%);
+  --gradient-overlay: linear-gradient(90deg, rgb(240 249 251 / 36%) 0%, rgba(240, 249, 251, .3) 100%);
   --shadow-color: rgba(132, 169, 140, 0.2);
   --hover-bg: #F8F4F0;
 
@@ -67,7 +67,7 @@
   --bg-secondary: #FFF0EB;
   --bg-tertiary: #FFF9F6;
   --border-subtle: #FFEEE6;
-  --gradient-overlay: linear-gradient(90deg, rgba(255, 249, 246, 0.9) 0%, rgba(255, 249, 246, 0.3) 100%);
+  --gradient-overlay: linear-gradient(90deg, rgb(240 249 251 / 36%) 0%, rgba(240, 249, 251, .3) 100%);
   --shadow-color: rgba(255, 138, 113, 0.25);
   --hover-bg: #FFF5F2;
 
@@ -90,7 +90,7 @@
   --bg-secondary: #F7F0F5;
   --bg-tertiary: #FAF5F8;
   --border-subtle: #EADCE6;
-  --gradient-overlay: linear-gradient(90deg, rgba(253, 250, 246, 0.9) 0%, rgba(253, 250, 246, 0.3) 100%);
+  --gradient-overlay: linear-gradient(90deg, rgb(240 249 251 / 36%) 0%, rgba(240, 249, 251, .3) 100%);
   --shadow-color: rgba(179, 146, 172, 0.25);
   --hover-bg: #F9F0F6;
 
